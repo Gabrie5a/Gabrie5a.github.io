@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> <!--root html element-->
+    <head>
+        <!--window name-->
+        <title> Gabriela Cano - Assignment 1</title>
+    </head>
+    <body>
+        <h2>Assignment 1</h2><br>
+        <div>Hey! It looks like a paragraph, but there is a block/box here too. Find that HTML element other than &lt;p&gt; and &lt;h&gt;</div>
+        <!--<p> alrd has indentation-->
+        <p><a href="https://www.google.com" style="color:#ed7eb0"><b>This is a link to Google</b></a><!--lightpink is too light--></p>
+        <img src="disneyworld.jpg" alt="Disney World at Night" width="171" height="256">
+        <!--address tag is another block/box, useful for identifying the content-->
+        <address><i>Email me by clicking on
+            <a href="mailto:jon.d@gmail.com">Jon Doe</a>.<br>
+            Visit us at:<br>
+            <a href="https://disneyworld.disney.go.com">Disney World</a><br>
+            Box 678, Disneyland<br>
+            USA
+        </i></address>
+        <h2>Bonus! Create A Table</h2>
+        <!--style tag (css) helps to stylize the table, header, cell elements-->
+        <style> th, td{
+            border: 1px solid grey;
+            /*inset for inner shadow*/
+            box-shadow: 1px 1px black inset;
+        }
+        table{
+            border: 2px solid grey;
+            /*horizontal,vertical,blur,spread*/
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        </style>
+        <table style="background-color:yellow">
+          <colgroup><!--group cols tag for stylizing cols-->
+            <col span="4" width="100"><!--span for # of cols-->
+          </colgroup>
+          <tr><!--row tag-->
+            <th></th><!--header tag-->
+            <th>width</th>
+            <th>border</th>
+            <th>bgcolor</th>
+          </tr>
+          <!--use <tbody> to group the body cells for stylizing-->
+          <tbody style="background-color:lightpink;text-align:center">
+          <tr>
+            <th>Value1</th>
+            <td>="100"</td><!--cell tag-->
+            <td>="2"</td>
+            <td>="yellow"</td>
+          </tr>
+          <tr>
+            <th>Value2</th>
+            <!--can't use <i> across cells-->
+            <td style="font-style:italic">italic</td>
+            <td style="font-style:italic">="2" or "2px"</td>
+            <td>="lightpink"</td>
+          </tr></tbody>
+        </table>
+    </body>
+</html>
+
