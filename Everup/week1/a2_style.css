@@ -1,6 +1,7 @@
 body{
     margin: 0;
     height: 700px;
+    /* make the bgpic the full screen*/
     background-size: 100%;
 }
 .center{
@@ -15,22 +16,21 @@ nav{
     border-bottom: 4px solid hotpink;
     text-align:center;
     background-color:plum;
+    /* space between text and box */
     padding: 1% 5% 2%;
 }
 nav a{
-    color:white;
+    color:purple;
     text-decoration:none;
+    /* separate <a> elements */
     padding: 2.5%;
 }
 nav a:hover{
     background-color: hotpink;
-    color:purple;
+    color:white;
     padding: 2% 3% 2.5%;
 }
 .container1{
-    /* position:sticky;
-    left: 36%;
-    width: 45%; */
     width: 30%;
     height: 30%;
     margin: auto;
@@ -40,19 +40,16 @@ iframe{
     width: 100%;
     height:100%;
 }
-img{
-    width: 30%;
-    border: 2px solid black;
-    border-radius: 3%;
-}
-.paragraph{
-    float:left;
-}
 .container2{
     width: 80%;
     height: 40%;
     margin: auto;
     margin-top: 5%;     
+}
+img{
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 3%;
 }
 .container3{
     width: 40%;
@@ -60,8 +57,10 @@ img{
     float: right;
 }
 .paragraph{
+    /* make the div float */
+    float:left;
     width: 100%;
-    height: 85%;
+    height: 80%;
 }
 .paragraph p{
     padding-top:10%;
@@ -83,9 +82,10 @@ img{
     background-color: lightpink;
 }
 .button{
+    /* button container can be modified */
+    float: left;
     width: 50%;
     height: 10%;
-    float: inline-start;
     margin-left: 25%; 
 }
 button{
@@ -99,9 +99,8 @@ button{
     font-size: 12px;
 }
 button:hover{
-    /* papayawhip */
     background-color:sandybrown;
-    color:black;
+    color:papayawhip;
 }
 footer{
     border-top: 4px solid hotpink;
@@ -109,7 +108,6 @@ footer{
     background-color:midnightblue;
     width: 100%;
     height: 11%;
-    /* padding: 1% 5% 2.5%; */
 }
 footer p{
     color:white;
