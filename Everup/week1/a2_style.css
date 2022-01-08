@@ -11,6 +11,8 @@ body{
     border: 4px solid hotpink;
     background-color:thistle;
     box-shadow: 0px 4px 6px darkslateblue;
+    /* makes it relative to previous position */
+    position: relative;
 }
 nav{
     border-bottom: 4px solid hotpink;
@@ -61,6 +63,8 @@ img{
     float:left;
     width: 100%;
     height: 80%;
+    /* div reamins inside */
+    overflow: auto;
 }
 .paragraph p{
     padding-top:10%;
@@ -108,6 +112,9 @@ footer{
     background-color:midnightblue;
     width: 100%;
     height: 11%;
+    /* remains in the bottom of block */
+    bottom: 0;
+    position: absolute;
 }
 footer p{
     color:white;
