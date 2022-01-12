@@ -1,0 +1,126 @@
+body{
+    background-color: lightblue;
+}
+.parent{
+    position: relative;
+    height: 1000px;
+    border: 2px solid black;
+    background-image: url('garden.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* .garden{
+    width: 100%;
+    height: 100%;
+} */
+.butterfly{
+    position: absolute;
+    bottom:0;
+    height: 20%;
+    animation-name: butter-fly;
+    /* animation-duration: 5s;
+    animation-delay:1s;//when the animation is first loaded
+    animation-iteration-count: infinite; */
+    animation: butter-fly 5s infinite;
+}
+.butterfly2{
+    position: absolute;
+    height: 20%;
+    animation: butter2-fly 8s infinite;
+}
+.butterfly3{
+    position: absolute;
+    height: 20%;
+    animation: butter3-fly 9s infinite;
+}
+@keyframes butter2-fly{
+    0% {bottom:0%; left:0%;}
+    30%{ bottom:0%; left: 20%;transform:rotate(360deg);}
+    60% {bottom:0; left: 50%}
+    100% {bottom:0; left: 80%; transform: rotate(-50deg);}
+}
+@keyframes butter-fly{
+    0% {bottom:0; left:0%;}
+    /* can just use left if position is abs */
+    50% {bottom:20%; left:30%; transform:rotate(-50deg);}
+    100% {bottom:0; left:80%;}
+}
+@keyframes butter3-fly{
+    0% {bottom:0%; left:0%;}
+    50% {bottom:50%; left:40%; transform: rotate(360deg);}
+    100% {bottom:0; left: 80%;}
+}
+.box{
+    background-color: purple;
+    height: 20px;
+    width: 5%;
+    animation: boxmove 9s infinite;
+}
+@keyframes boxmove {
+    100% {width: 100%; background-color:green;}
+}
+
+/* slideshow */
+
+.stage{
+    width: 20%;
+    height:200px;
+    border: 4px solid hotpink;
+    overflow: hidden;
+    margin: auto;
+}
+.slidewrap{
+    height:100%;
+    width:400%;
+    animation: slideshow 4s infinite;
+}
+.slidewrap div{
+    float:left;
+    width:25%;
+    height:100%;
+}
+h1{
+    padding: 8%;
+    text-align:center;
+}
+.slide1{
+    background-color: white;
+}
+.slide2{
+    background-color: yellow;
+}
+.slide3{
+    background-color: orange;
+}
+.slide4{
+    background-color: red;
+}
+@keyframes slideshow{
+    /* needs postion attribute to use left */
+    0% {margin-left: 0%;}
+    33% {margin-left:-100%;}
+    66% {margin-left:-200%;}
+    100% {margin-left:-300%;}
+}
+
+.stage{
+    width: 20%;
+    height:200px;
+    border: 4px solid hotpink;
+    overflow: hidden;
+    margin: auto;
+}
+.photowrap{
+    height:100%;
+    width:400%;
+    animation: slideshow 4s infinite;
+}
+.photowrap div{
+    float:left;
+    width:25%;
+    height:100%;
+}
+.photowrap img{
+    width:100%;
+    height:100%;
+}
