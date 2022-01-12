@@ -1,16 +1,16 @@
 body{
     height: 900px;
-    background-image: linear-gradient(-30deg, skyblue, lightgreen);
+    background-image: linear-gradient( skyblue, lightpink);
 }
 .box{
-    box-shadow: 4px 4px 7px olivedrab;
+    box-shadow: 4px 4px 7px black;
     width: 65%;
     /* no height proportionally changes the img when sizing*/
     margin:auto;
     position: relative;
     color: white;
-    background-color: burlywood;
-    border: 2px solid burlywood;
+    background-color: black;
+    border: 2px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:1vw;
 }
@@ -26,7 +26,7 @@ div > img{
     right: 5%;
     position:absolute;
     text-align: center;
-    border: 8px double lightsalmon;
+    border: 8px double black;
     overflow: auto;
 }
 p{
@@ -52,15 +52,18 @@ input:hover{
     width:20%;
     position:relative;
     margin:auto;
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px black;
+    border: 10px dashed black;
 }
 .clock > img{
     width: 100%;
 }
 .hand1{
     width: 25%;
-    height: 15%;
-    top: 42%;
+    height: 18%;
+    top: 40%;
     right: 25%;
     position:absolute;
     animation: hour 10s infinite;
@@ -69,18 +72,18 @@ input:hover{
 .hand2{
     width: 35%;
     height: 15%;
-    top: 42%;
+    top: 41.5%;
     right: 15%;
     position:absolute;
     animation: minutes 10s infinite;
     transform-origin: left;
 }
 @keyframes hour {
-    100%{top: 42%;right: 25%;transform:rotate(30deg);}
-}
+    100%{top: 40%;right: 25%;transform:rotate(30deg);}
+} 
 @keyframes minutes {
-    0%{top: 42%;right: 15%; transform: rotate(-90deg);}
-    100%{top: 42%;right: 15%;transform:rotate(270deg);}
-}
+    0%{top: 41.5%;right: 15%; transform: rotate(-90deg);}
+    100%{top: 41.5%;right: 15%;transform:rotate(270deg);}
+} 
 
 
