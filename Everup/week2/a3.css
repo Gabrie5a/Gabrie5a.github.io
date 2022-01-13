@@ -58,13 +58,13 @@ input:hover{
 }
 .clock > img{
     width: 100%;
-    margin-bottom:-1.5%;
+    margin-bottom:-0.5vw;
     height: 100%;
 }
 .hand1{
     width: 25%;
     height: 18%;
-    top: 40.5%;
+    top: 42%;
     right: 25.5%;
     position:absolute;
     animation: hour 10s infinite;
@@ -73,18 +73,18 @@ input:hover{
 .hand2{
     width: 33%;
     height: 15%;
-    top: 42.5%;
+    top: 43%;
     right: 20%;
     position:absolute;
     animation: minutes 10s infinite;
     transform-origin: left;
 }
 @keyframes hour {
-    100%{top: 40.5%;right: 25.5%;transform:rotate(30deg);}
+    100%{top: 42%;right: 25.5%;transform:rotate(30deg);}
 } 
 @keyframes minutes {
-    0%{top: 42.5%;right: 17%; transform: rotate(-90deg);}
-    100%{top: 42.5%;right: 17%;transform:rotate(270deg);}
+    0%{top: 43.5%;right: 17%; transform: rotate(-90deg);}
+    100%{top: 43.5%;right: 17%;transform:rotate(270deg);}
 } 
 .bgimg{
     width:30%;
