@@ -4,7 +4,7 @@ body{
 }
 .box{
     box-shadow: 4px 4px 7px black;
-    width: 65%;
+    width: 70%;
     /* no height proportionally changes the img when sizing*/
     margin:auto;
     position: relative;
@@ -53,12 +53,17 @@ input:hover{
     position:relative;
     margin:auto;
     background-color: whitesmoke;
+    background-color: hsla(212, 24%, 42%, 0.5);
     border-radius: 50%;
     box-shadow: 0px 0px 10px black;
     border: 5px dashed black;
 }
 .clock > img{
     width: 100%;
+}
+.clock:hover{
+    background-color:transparent;
+    border-color: white;;
 }
 .hand1{
     width: 25%;
