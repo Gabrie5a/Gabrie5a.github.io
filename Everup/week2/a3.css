@@ -1,8 +1,6 @@
 body{
     height: 900px;
-    /* min-height: 100vh; */
     background-image: linear-gradient( skyblue, lightpink);
-    background-size: contain;
 }
 .box{
     box-shadow: 4px 4px 7px black;
@@ -12,7 +10,7 @@ body{
     position: relative;
     color: white;
     background-color: black;
-    border: 2px solid black;
+    border: 0.4vw solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:1vw;
 }
@@ -28,7 +26,7 @@ div > img{
     right: 5%;
     position:absolute;
     text-align: center;
-    border: 8px double black;
+    border: 0.8vw double black;
     overflow: auto;
 }
 p{
@@ -50,48 +48,51 @@ input:hover{
     background-color: white;
 }
 .clock{
-    padding: 1%;
     width:20%;
     position:relative;
     margin:auto;
-    background-color: whitesmoke;
-    background-color: hsla(212, 24%, 42%, 0.5);
+    background-color: hsla(54, 84%, 52%, 0.5);
     border-radius: 50%;
     box-shadow: 0px 0px 10px black;
-    border: 5px dashed black;
+    border: 1vw dotted black;
 }
 .clock > img{
     width: 100%;
+    margin-bottom:-1.5%;
     height: 100%;
-}
-.clock:hover{
-    background-color:transparent;
-    border-color: white;;
 }
 .hand1{
     width: 25%;
     height: 18%;
-    top: 40%;
-    right: 25%;
+    top: 40.5%;
+    right: 25.5%;
     position:absolute;
     animation: hour 10s infinite;
     transform-origin: left;
 }
 .hand2{
-    width: 35%;
+    width: 33%;
     height: 15%;
-    top: 41.5%;
-    right: 15%;
+    top: 42.5%;
+    right: 20%;
     position:absolute;
     animation: minutes 10s infinite;
     transform-origin: left;
 }
 @keyframes hour {
-    100%{top: 40%;right: 25%;transform:rotate(30deg);}
+    100%{top: 40.5%;right: 25.5%;transform:rotate(30deg);}
 } 
 @keyframes minutes {
-    0%{top: 41.5%;right: 15%; transform: rotate(-90deg);}
-    100%{top: 41.5%;right: 15%;transform:rotate(270deg);}
+    0%{top: 42.5%;right: 17%; transform: rotate(-90deg);}
+    100%{top: 42.5%;right: 17%;transform:rotate(270deg);}
 } 
+.bgimg{
+    width:30%;
+    height:50%;
+    top:20%;
+    right:37%;
+    position:absolute;
+}
+
 
 
