@@ -35,10 +35,10 @@ body{
 .box1{
     border:2px solid red;
     width:100px;
-    order:;
-    flex:;
+    /* order:;
+    flex:; */
     /* for child only */
-    align-self: ;
+    /* align-self: ; */
 }
 .box2{
     border:2px solid red;
