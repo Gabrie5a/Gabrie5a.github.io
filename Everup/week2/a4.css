@@ -11,6 +11,7 @@ body{
     margin:auto;
     /* justify-content:center;
     align-content:center; */
+    overflow:auto;
 }
 .brd{
     padding:1%;
@@ -93,4 +94,10 @@ body{
 }
 .container{
     width:100%;
+}
+.row{
+    margin-top: 5%;
+}
+.col{
+    padding:2%;
 }
