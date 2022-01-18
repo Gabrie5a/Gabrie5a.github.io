@@ -1,26 +1,25 @@
 body{
     /* width:100%; */
-    height:auto;
+    height:900px;
     background-color:darkcyan;
     font-family:'Courier New', Courier, monospace;
 }
 .icon{
-    /* width:100%; */
+    /* width:80%; */
     margin-left:5%;
 }
 .icon > img{
-    width:8%;
+    width:10%;
     height:100%;
     animation: 3s sheep infinite;
 }
 .header{
     padding-top:1.5%;
-    width:80%;
+    width:48%;
     height:20%;
     float: right;
     /* border: 4px solid black; */
-    margin-right: 10%;
-    overflow: hidden;
+    margin-right: 40%;
 }
 .header > h1{
     /* border:2px solid black; */
@@ -43,17 +42,17 @@ body{
     100%{transform: scale(0.5);}
 }
 @keyframes title {
-    0%{transform: translateY(-3vh);}
-    20%{transform: translateY(6vh);}
-    80%{transform: initial;}
-    100%{transform: translateY(-3vh);}
+    /* 0%{transform: translateY(-1vw);} */
+    30%{transform: translateY(5vw);}
+    60%{transform: translateY(-2vw)}
+    100%{transform: translateY(initial);}
     /* 100%{transform:translateY(-20px)} */
 }
 @keyframes stitle {
-    0%{transform: translateY(3vh);}
-    20%{transform: translateY(-6vh);}
-    80%{transform: initial;}
-    100%{transform:translateY(3vh);}
+    /* 0%{transform: translateY(1vw);} */
+    30%{transform: translateY(-5vw);}
+    60%{transform: translateY(2vw)}
+    100%{transform:translateY(initial);}
     /* 100%{transform: translateY(20px);} */
 }
 .stage{
@@ -63,6 +62,9 @@ body{
     height:50px;
     overflow:hidden;
     margin-left:5%;
+    border-top: 8px double bisque;
+    border-left: 8px double bisque;
+    border-right: 8px double bisque;
 }
 .slideshow{
     width:300%;
@@ -100,22 +102,25 @@ body{
 } 
 .frontimg > img{
     width:100%;
+    border: 8px double bisque;
 }
 .imgtxt{
     position:absolute;
     background-color: rgba(143, 105, 80, 0.507);
     right:25%;
-    bottom:40%;
+    bottom:45%;
     width:30%;
     text-align:center;
+    border: 4px dotted burlywood;
+    color: whitesmoke;
 }
 .arcanine{
-    width:45%;
-    height:40vw;
+    width:40%;
+    height:40%;
     margin-left:5%;
     position:relative;
     background:linear-gradient(rgba(202, 143, 153, 0.397),rgba(89, 32, 155, 0.5)),url('images/arcanine.jpg') center;
-    border: 2px solid lightyellow;
+    border: 8px double bisque;
     float:left;
 }
 .arcanine > img{
@@ -127,18 +132,20 @@ body{
     top:5%;
     right:5%;
     width:40%;
-    border: 2px solid bisque;
+    border:3px dotted lightgoldenrodyellow;
     padding:2%;
+    color:whitesmoke;
 }
 .benefit{
     margin:auto;
     width:30%;
-    height: 30.3vw;
+    /* height: 30.3vw; */
     padding:5%;
-    border: 2px solid lightyellow;
+    border: 8px double bisque;
     float: right;
     background-image:linear-gradient(rgba(230, 105, 122, 0.397),rgba(52, 176, 214, 0.5));
-    margin-right:5%;
+    margin-right:4%;
+    color:mistyrose;
 }
 
 .flexbox{
@@ -162,13 +169,13 @@ body{
     margin:auto;
     width:400px;
     /* height: 25vw; */
-    border: 4px solid beige;
+    border: 8px double bisque;
     /* position:absolute; */
 }
 .center{
     width:100%;
     height:100%;
-    margin:auto;
+    /* margin:auto; */
     padding-bottom: 5%;
     background-color: lightblue;
     /* position: relative; */
@@ -191,9 +198,9 @@ body{
     text-decoration: none;
 }
 .btn:hover{
-    background-color: lightpink;
-    color:darkslategrey;
-    border: 2px solid bisque;
+    background-color: darkslategrey;
+    color:bisque;
+    border: 2px dotted bisque;
 }
 .mdl{
     /* opacity:0; */
@@ -261,18 +268,56 @@ body{
     width:12%;
     color:darkcyan;
     background-color: bisque;
-   
     padding: 1%;
     border-radius: 4px;
     text-decoration: none;
     /* position:absolute; */
 }
 .btn2:hover{
-    background-color: lightpink;
-    color:darkslategrey;
-    border: 2px solid bisque;
+    background-color: darkslategrey;
+    color:bisque;
+    border: 2px dotted bisque;
 }
 .mdl:target{
     display:initial;
     pointer-events:all;
+}
+.footer{
+    background-color: cadetblue;
+    width: 96%;
+}
+.box{
+    /* padding: 1%; */
+    margin:auto;
+    width:25%;
+    /* height: 25vw; */
+    /* position:absolute; */
+}
+.box > p, h3{
+    text-align:center;
+}
+.hr {
+    width:90%;
+    margin:auto;
+}
+.hr > h3{
+    text-align: right;
+    position:relative;
+}
+.links{
+    width: 18%;
+    height:60%;
+    float: right;
+}
+.fab{
+    font-size:25px;
+    color: pink;
+}
+.fab:hover{
+    color:darkslategrey;
+}
+.last{
+    width:100%;
+    text-align: center;
+    padding-top: 8%;
 }
