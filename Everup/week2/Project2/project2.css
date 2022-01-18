@@ -20,6 +20,7 @@ body{
     float: right;
     /* border: 4px solid black; */
     margin-right: 40%;
+    /* overflow:hidden; */
 }
 .header > h1{
     /* border:2px solid black; */
@@ -43,15 +44,15 @@ body{
 }
 @keyframes title {
     /* 0%{transform: translateY(-1vw);} */
-    30%{transform: translateY(5vw);}
-    60%{transform: translateY(-2vw)}
+    30%{transform: translateY(90%);}
+    60%{transform: translateY(-50%)}
     100%{transform: translateY(initial);}
     /* 100%{transform:translateY(-20px)} */
 }
 @keyframes stitle {
     /* 0%{transform: translateY(1vw);} */
-    30%{transform: translateY(-5vw);}
-    60%{transform: translateY(2vw)}
+    30%{transform: translateY(-90%);}
+    60%{transform: translateY(50%)}
     100%{transform:translateY(initial);}
     /* 100%{transform: translateY(20px);} */
 }
