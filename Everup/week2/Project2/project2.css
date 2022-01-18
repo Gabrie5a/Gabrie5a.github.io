@@ -108,9 +108,9 @@ body{
 .imgtxt{
     position:absolute;
     background-color: rgba(143, 105, 80, 0.507);
-    right:25%;
-    bottom:45%;
-    width:30%;
+    right:15%;
+    top:30%;
+    width:50%;
     text-align:center;
     border: 4px dotted burlywood;
     color: whitesmoke;
