@@ -23,8 +23,8 @@ bmi.addEventListener("click", weight);
 function weight(){
     let weightJ = prompt(`Please enter John's weight (in kg)`);
     let heightJ = prompt(`Please enter John's height (in m)`);
-    let weightL = prompt(`Please enter John's weight (in kg)`);
-    let heightL = prompt(`Please enter John's height (in m)`);
+    let weightL = prompt(`Please enter Lucas' weight (in kg)`);
+    let heightL = prompt(`Please enter Lucas' height (in m)`);
     let johnBMI = Number(weightJ)/(Number(heightJ)**2);
     let lucasBMI = Number(weightL)/(Number(heightL)**2);
     let lucasHigherBMI = true;
