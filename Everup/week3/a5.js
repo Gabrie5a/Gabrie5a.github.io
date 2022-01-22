@@ -21,18 +21,18 @@ console.log(`${faren} °F is ${tempFaren(faren)} °C`);
 const bmi = document.querySelector('#bmi');
 bmi.addEventListener("click", weight);
 function weight(){
-    let weightJ = prompt(`Please enter John's weight (in kg)`);
-    let heightJ = prompt(`Please enter John's height (in m)`);
-    let weightL = prompt(`Please enter Lucas' weight (in kg)`);
-    let heightL = prompt(`Please enter Lucas' height (in m)`);
+    let weightJ = prompt(`Please enter John's weight (kg)`);
+    let heightJ = prompt(`Please enter John's height (m)`);
+    let weightL = prompt(`Please enter Lucas' weight (kg)`);
+    let heightL = prompt(`Please enter Lucas' height (m)`);
     let johnBMI = Number(weightJ)/(Number(heightJ)**2);
     let lucasBMI = Number(weightL)/(Number(heightL)**2);
     let lucasHigherBMI = true;
     if (johnBMI > lucasBMI){
         lucasHigherBMI = false;
     }
-    console.log(`John's BMI (${johnBMI}) is higher than Lucas' BMI (${lucasBMI}), that is ${lucasHigherBMI}`);
-    document.querySelector('h2').textContent = `John's BMI (${johnBMI}) is higher than Lucas' BMI (${lucasBMI}), that is ${lucasHigherBMI}!`;
+    console.log(`John's BMI (${johnBMI}) is higher than Lucas' BMI (${lucasBMI}), that is ${lucasHigherBMI}!`);
+    document.querySelector('#bmiR').textContent = `John's BMI (${johnBMI}) is higher than Lucas' BMI (${lucasBMI}), that is ${lucasHigherBMI}!`;
 }
 
 
@@ -43,15 +43,15 @@ function update(){
     let input = prompt('Please Enter a Number!');
     if (Number(input) ===10 || Number(input) === 8){
         console.log(`You win ${input} points`);
-        document.querySelector('#point').textContent = `You win ${input} points!`;
+        document.querySelector('#pointR').textContent = `You win ${input} points!`;
     }
     else if (input.length === 0 || isNaN(input)){
-        document.querySelector('#point').textContent = "Please Enter A Number!!";
-        console.log("Pkease Enter A Number!");
+        document.querySelector('#pointR').textContent = "Please Enter A Number!!";
+        console.log("Please Enter A Number!");
         // update();
     }
     else{
         console.log("NOT MATCHED!!");
-        document.querySelector('#point').textContent = "NOT MATCHED!!";
+        document.querySelector('#pointR').textContent = "NOT MATCHED!!";
     }
 }
