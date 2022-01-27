@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Project3</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>GUESS MY NUMBER</h1>
+      <h3>Guess the number between 1 and 100</h3>
+    </div>
+    <div class="grandparent">
+      <div class="gamePanel" id="gameBar">
+        <p class="score">Score: 10</p>
+        <p class="highScore">High Score: 0</p>
+        <a href="index.html">Reset</a>
+      </div>
+      <div class="parent" id="mainGame">
+        <div class="align">
+          <img class="dog" src="original.gif" /><br />
+          <img class="question" src="question.png" /><br />
+          <input type="text" id="userInput" />
+          <a class="checkButton" onclick="returnText()"
+            ><p><b>Check</b></p></a
+          >
+          <p class="correction">Guess a Number!</p>
+        </div>
+      </div>
+
+      <div class="history" id="hist">
+        <h3>Guess History</h3>
+        <ul>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODALS -->
+    
+    <div id="win" class="parent">
+      <div class="align">
+        <img id="winImg" src="win.gif">
+        <h2 class="winScore"></h2>
+        <p class="winBest"></p>
+        <a id="winButton" onclick="reset()">Play Again</a>
+      </div>
+    </div>
+    <div id="lose" class="parent">
+      <div class="align" id="lose">
+        <img src="lose.gif">
+        <h2 class="loseScore"></h2>
+        <p class="loseBest "></p>
+        <a id="loseButton" onclick="reset()">Play Again</a>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
