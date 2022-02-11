@@ -10,7 +10,6 @@ function winner(team1, team2){
     for (let i = 0; i < 3; i++){//alt: team1.length
         netTotal += team1[i];
         knickTotal += team2[i];
-        console.log(team1[i], team2[i]);
     }
     let netAvg = netTotal/3;
     let knickAvg = knickTotal/3;
@@ -30,15 +29,16 @@ function winner(team1, team2){
 
 function callScoresNet(){
     for (let i = 0; i < 3; i++)
-        netS1[i] = prompt(`Input Score of Round ${i}`);
+        netS1[i] = Number(prompt(`Input Score of Round ${i+1}`));
 }
 
 function callScoresKnick(){
     for (let i = 0; i < 3; i++)
-        knickS1[i] = prompt(`Input Score of Round ${i}`);   
+        knickS1[i] = Number(prompt(`Input Score of Round ${i+1}`));   
 }
 
 function winnerWho(){
+    console.log(netS1,knickS1);
     winner(netS1, knickS1);
 }
 
