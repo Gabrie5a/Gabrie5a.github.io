@@ -1,0 +1,45 @@
+body {
+    background-color: paleturquoise;
+}
+div {
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+}
+
+p{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 90px;
+    font-family: cursive;
+}
+
+#a {
+    background-color: orchid;
+    border: 0.5em solid black;
+}
+
+#b {
+    background-color: dodgerblue;
+    border: 1em solid black;
+    margin-left: 20%;
+}
+
+#c {
+    background-color: skyblue;
+    border: 2em solid black;
+    margin-left: 40%;
+}
+
+#d {
+    background-color: mediumaquamarine;
+    border: 4em solid black;
+    margin-left: 60%
+}
+
+#e {
+    background-color: yellowgreen;
+    border: 8em solid black;
+    margin-left: 80%;
+    color: paleturquoise;
+}
