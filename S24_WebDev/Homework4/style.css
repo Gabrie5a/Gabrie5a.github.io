@@ -17,6 +17,11 @@ body {
     height: 500px;
 }
 
+.carousel-caption {
+    /* background-color: bisque; */
+    text-shadow: 2px 2px #000000;
+}
+
 div.carousel-item img {
     position: absolute;
     object-fit: contain;
@@ -58,6 +63,9 @@ footer {
 .list-group-item-action img {
     height: 200px;
 }
+
+/* Event.html */
+
 
 /* Custom Scrollbar */
 /* width */
