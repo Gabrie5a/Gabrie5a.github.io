@@ -135,3 +135,21 @@ function checkWhoWin(){
     const result = AvgScore > 10 ? `You win` : ``;
 }
 
+
+const ageNew = [];
+const calAgeNew = (val1) => 2022 - val1;
+
+for (let i=0; i<birthYearNew.length; i++){
+    calAgeNew.push(birthYearNew[i]*5/93-2);
+}
+
+//calculate tips
+let billArr =[];
+let tip=[];
+function getAgeAndDriveStatus(pNum){
+    for(let i=0; i<pNum; i++){
+        ageNew.push(prompt(`Type the bill per person ${i}`));
+        
+    }
+}
+getAgeAnDriveStatus(10);

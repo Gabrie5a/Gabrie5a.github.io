@@ -1,0 +1,33 @@
+@font-face { font-family: Bubble; src: url(assets/a-alloy-ink-font/AlloyInk-lgdWw.otf); } 
+body {
+    font-family: Bubble;
+    width: 100%;
+    height: 900px;
+    background-color: bisque;
+}
+.navbar {
+    border: solid peru;
+}
+
+
+.carousel {
+    border: solid peru;
+}
+.carousel .carousel-item {
+    height: 500px;
+    
+}
+
+div.carousel-item img {
+    position: absolute;
+    object-fit: contain;
+    top: -20%;
+    min-height: 760px;
+}
+
+.toast {
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+}
+
