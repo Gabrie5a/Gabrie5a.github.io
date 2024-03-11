@@ -15,7 +15,6 @@ body {
 }
 .carousel .carousel-item {
     height: 500px;
-    
 }
 
 div.carousel-item img {
@@ -25,9 +24,60 @@ div.carousel-item img {
     min-height: 760px;
 }
 
-.toast {
-    position: absolute;
-    right: 1%;
-    bottom: 2%;
+
+.img-thumbnail {
+    height: 100px;
 }
 
+.toast {
+    right: 1%;
+    bottom: 1%;
+    position: fixed;
+}
+
+.d-block {
+    width: 90%;
+    padding-bottom: 3%;
+}
+
+.text-center {
+    padding-bottom: 2%;
+}
+
+footer {
+    background-color: white;
+    bottom: 0;
+}
+
+.social i{
+    font-size: xx-large;
+}
+
+/* Concert.html */
+
+.list-group-item-action img {
+    height: 200px;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px peru; 
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: chocolate; 
+    border: solid white;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: brown; 
+  }

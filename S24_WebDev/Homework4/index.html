@@ -17,7 +17,7 @@
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Categories</h5>
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Browse</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -74,64 +74,60 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <!-- End of Carousel -->
-    <!-- 
-    trending songs
-    comebacks
-    fan-held events
-    upcoming concerts
-    giveaways
-    join our newsletter to stay up to date 
-    -->
-    <!-- Loading Bar -->
-    <div class="d-flex align-items-center">
-        <strong role="status">Loading...</strong>
-        <div class="spinner-border ms-auto" aria-hidden="true"></div>
-    </div>
-    <!-- Toast -->
-    <div class="toast show">
-        <div class="toast-header">
-          WELCOME!
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body">
-          Thank you for visiting our site. Don't forget to 
-          <a data-bs-target="#exampleModal" data-bs-toggle="modal" href ="#exampleModal"> Sign Up!</a> 
-        </div>
-    </div>
+    <br>
 
     <!-- Trending Songs - List Group Numbered-->
-    <h3> Trending Songs</h3>
-    <ol class="list-group list-group-numbered">
-        <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="d-flex p-2"> <h3> Trending</h3></div>
+    <ol class="list-group list-group-numbered d-flex p-2">
+        <li class="list-group-item d-flex justify-content align-items-center"> 
+          <img src="assets/smart-cover.jpg" class="img-thumbnail" alt="smart">
           <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Content for list item
+            <div class="fw-bold">smart</div>
+            le sserafim
           </div>
           <span class="badge text-bg-primary rounded-pill">New</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Content for list item
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="assets/cravity-cover.jpg" class="img-thumbnail" alt="loveordie">
+            <div class="ms-2 me-auto">
+            <div class="fw-bold">Love or die</div>
+            cravity
           </div>
-          <span class="badge text-bg-primary rounded-pill">1</span>
+          <span class="badge text-bg-primary rounded-pill">-1</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Subheading</div>
-            Content for list item
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="assets/xikers-cover.jpg" class="img-thumbnail" alt="wedontstop">
+            <div class="ms-2 me-auto">
+            <div class="fw-bold">we don't stop</div>
+            xikers
           </div>
-          <span class="badge text-bg-primary rounded-pill">+1</span>
+          <span class="badge text-bg-primary rounded-pill">new</span>
         </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="assets/bibi-cover.png" class="img-thumbnail" alt="sugarrush">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">sugar rush</div>
+              bibi
+            </div>
+            <span class="badge text-bg-primary rounded-pill">-</span>
+          </li>
     </ol>
+
+    <!-- Loading Bar -->
+    <div class="d-flex align-items-center d-flex p-2">
+        <strong role="status">Loading ...</strong>
+        <div class="spinner-border ms-auto" aria-hidden="true"></div>
+    </div>
 
     <!-- Button trigger modal -->
     <br>
-    <h3> Register to our newsletter!</h3>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Sign Up
-    </button>
+    <div class="text-center">
+        <h3> Register to our newsletter!</h3>
+        <p>~Stay up to date with the latest news in kpop~</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Sign Up
+        </button>
+    </div>
     
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -197,6 +193,31 @@
         </div>
     </div>
 
+    <!--  Footer  -->
+    <footer class="text-center opacity-75"> <br>
+        <div class="social">
+            <h4>Connect with Us</h4>
+            <a target="_blank" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        </div>
+        <hr>
+        <p> Copyright @K-POP IN NYC all rights reserved</p>
+    </footer>
+    <!-- Toast -->
+    <div class="toast show">
+        <div class="toast-header">
+          WELCOME!
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+          Thank you for visiting our site. Don't forget to 
+          <a data-bs-target="#exampleModal" data-bs-toggle="modal" href ="#exampleModal"> Sign Up!</a> 
+        </div>
+        <img src="assets/haechan.gif" class="rounded mx-auto d-block" alt="sugarrush">
+    </div>
+
+    <script src="https://kit.fontawesome.com/2806732af0.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="action.js"></script>
 </body>
