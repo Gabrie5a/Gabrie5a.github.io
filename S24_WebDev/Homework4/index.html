@@ -167,11 +167,11 @@
                 <form class="row g-2">
                     <div class="col-md-6">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" aria-label="First name">
+                        <input type="text" class="form-control" id="first_name" aria-label="First name">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" aria-label="Last name">
+                        <input type="text" class="form-control" id="last_name" aria-label="Last name">
                     </div>
                     <div class="col-12">
                         <label for="inputEmail14" class="form-label">Email</label>
@@ -212,7 +212,7 @@
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Sign Up</button>
+            <button type="button" class="btn btn-primary" id="signup" data-bs-dismiss="modal">Sign Up</button>
             </div>
         </div>
         </div>
@@ -241,9 +241,11 @@
         </div>
         <img src="assets/haechan.gif" class="rounded mx-auto d-block" alt="haechan">
     </div>
-
+    
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="https://kit.fontawesome.com/2806732af0.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="action.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
