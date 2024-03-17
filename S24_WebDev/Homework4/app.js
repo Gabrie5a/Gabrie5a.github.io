@@ -9,18 +9,24 @@ console.log(supabase);
 
 let signup = document.querySelector("#signup");
 signup.addEventListener("click", async(e)=>{
-    alert("You've been added to our Newsletter! &#129395;");
     e.preventDefault();
     let first_name = document.querySelector("#first_name").value;
     console.log(first_name);
     let last_name = document.querySelector("#last_name").value;
     let email = document.querySelector("#inputEmail14").value;
-
-    const res = await _supabase.from("newsletter_subs").insert({
-        first_name: first_name,
-        last_name: last_name,
-        email: email,
-    });
-    console.log(res);
+    if(first_name != "" && last_name != "" && email != ""){
+        const {data, error} = await _supabase.from("newsletter_subs").insert({
+            first_name: first_name,
+            last_name: last_name,
+            email: email,
+        });
+        console.log(data);
+        alert("You have been added to our Newsletter!");
+    }
+    else{
+        console.log("Unable to add to database");
+        alert("We were unable to add you ;(\nMake sure to fill out all your information!");
+    }
+    
 });
 
