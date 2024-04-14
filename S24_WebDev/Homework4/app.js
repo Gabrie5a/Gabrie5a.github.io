@@ -5,22 +5,26 @@ const supabaseKey =
 const supabaseUrl = 'https://eawzjhvdlnleprxdbkfl.supabase.co';
 
 const _supabase = supabase.createClient(supabaseUrl, supabaseKey);
-console.log(supabase);
+console.log(_supabase);
 
 let signup = document.querySelector("#signup");
 signup.addEventListener("click", async(e)=>{
     e.preventDefault();
     let first_name = document.querySelector("#first_name").value;
-    console.log(first_name);
+    // console.log(first_name);
     let last_name = document.querySelector("#last_name").value;
     let email = document.querySelector("#inputEmail14").value;
+    let table_id = 0;
     if(first_name != "" && last_name != "" && email != ""){
-        const {data, error} = await _supabase.from("newsletter_subs").insert({
+        const {data, error} = await _supabase
+        .from("newsletter_subs")
+        .insert({
             first_name: first_name,
             last_name: last_name,
             email: email,
-        });
-        console.log(data);
+        }).select();
+        table_id = data[0].id;
+        console.log(table_id);
         alert("You have been added to our Newsletter!");
     }
     else{
@@ -28,5 +32,5 @@ signup.addEventListener("click", async(e)=>{
         alert("We were unable to add you ;(\nMake sure to fill out all your information!");
     }
     
-});
+ });
 
