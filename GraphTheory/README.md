@@ -11,7 +11,7 @@ The RNA construction problem involves deriving the possible original RNA chains 
 
 ## Web Interface
 For ease of use, a web interface has been provided. Users only need to input an RNA chain, which will first be fragmented by the G and U.C enzymes. Then, the algorithm explained above will be followed to re-fragment and subsequently reconstruct and display the possible original RNA chains.
-Deployed with GitHub Pages: [https://gabrie5a.github.io/GraphTheory/index.html]
+Deployed with GitHub Pages: https://gabrie5a.github.io/GraphTheory/index.html
 
 ## Instructions
 1. **Input RNA Chain:** Provide an RNA chain to the web interface.
