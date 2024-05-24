@@ -1,5 +1,5 @@
 body {
-    background-image: url(./giphy.gif);
+    background-image: url(../img/giphy.gif);
     height: 100vh;
     /* Set background properties */
     background-size: 3%; /* Auto to maintain aspect ratio */
