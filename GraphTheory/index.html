@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"/>
+    <title>RNA POLYMERAZE</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li>
+            <details class="dropdown">
+              <summary role="button" class="secondary">Theme</summary>
+              <ul>
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--button-->
+    <div class="container">
+    <div class="title">
+      <h1>RNA Fragmentation</h1>
+    </div>
+    <br/>
+    <!-- Select -->
+    <label for="select"><h4>Select RNA Strand</h4></label>
+    <select id="select" name="select" required>
+      <option value="" selected>Select...</option>
+      <option value="AUCGAUGGACUAUACGCU">AUCGAUGGACUAUACGCU</option>
+      <option value="GCUAUAGUCCUACGUAGC">GCUAUAGUCCUACGUAGC</option>
+      <option value="UGCUAUAUGGCUUAGCAA">UGCUAUAUGGCUUAGCAA</option>
+      <option  value="CGUACGUAUAGUCGCCAU">CGUACGUAUAGUCGCCAU</option>
+    </select>
+    <br/><br/>
+   <h5>OR</h5>
+   <br/>
+    <!-- Text -->
+    <label for="text"><h4>Input Your Own</h4></label>
+    <input type="text" id="text" name="text" placeholder="Strand must be in all capitals with no spaces (ex: AUCGAUGGA)" />
+
+     <!-- Modal -->
+     <section id="modal">
+      <button id="submit" data-target="modal-example" onclick="toggleModal(event)">
+        Fragment!
+      </button>
+    </section>
+    <!-- ./ Modal -->
+      
+      <!-- Modal example -->
+      <dialog id="modal-example">
+        <article>
+          <header>
+            <button
+              aria-label="Close"
+              rel="prev"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            ></button>
+            <h3>RNA Fragmentation Information:</h3>
+          </header>
+          <div id="result">
+            <h5>Fragmented with G-enzyme</h5>
+            <p id="g_fragments"></p>
+            <h5>Refragmented with U.C-enzyme</h5>
+            <p id="g_uc_fragments"></p>
+            <h5> Fragmented with U.C-enzyme</h5>
+            <p id="uc_fragments"></p>
+            <h5>Refragmented with G-enzyme</h5>
+            <p id="uc_g_fragments"></p>
+            <h5>Multidigraph:</h5>
+            <p id="multidigraph"></p>
+            <h5>Potential RNA Strands:</h5>
+            <p id="circuits"></p>
+          </div>
+          <footer>
+            
+            <button id="done" class="secondary" autofocus data-target="modal-example" onclick="toggleModal(event)">
+              Done
+            </button>
+          </footer>
+        </article>
+      </dialog>
+      <!-- ./ Modal example -->
+    </div>
+
+   
+<!-- <iframe width="200" height="100" src="https://www.youtube.com/embed/3CfUULjfa14?si=ZfAt6vPpqMwBhVLG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <!-- Minimal theme switcher -->
+     <script src="js/minimal-theme-switcher.js"></script>
+     <script src="js/modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="index.js"></script>
+
+  </body>
+</html>
