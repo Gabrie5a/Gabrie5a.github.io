@@ -46,7 +46,7 @@ StarLy is deployed at https://starly.onrender.com
 ## APIs Used
 
 - **Lyrics.ovh API**: This API is used to fetch song lyrics. [API Documentation](https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search?console=1)
-- **YouTube Data API v3**: This API is used to fetch additional information about songs, such as artist details and music videos.
+- **YouTube Data API v3**: This API is used to fetch additional information about trending songs and embed music videos.
 
 ## Usage
 
