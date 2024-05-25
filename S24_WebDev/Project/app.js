@@ -1,25 +1,20 @@
 import express from "express";
 import axios from "axios";
-// import {dirname} from "path";
-
-
-//get current url path of current directory
-// const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //get API Key
 const YT_API_KEY = process.env.YT_API_KEY;
-//establish server information
+//establish API URL endpoints
 const port = process.env.PORT;
 const LYRIC_URL = "https://api.lyrics.ovh/v1/";
 let YT_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&regionCode=US&type=video&key="+YT_API_KEY+"&q=";
 const TRENDING_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=music%20video&regionCode=US&key="+YT_API_KEY;
 
 const app = express();
-//middleware - bodyParser gives a .body to both req and res
+//middleware - express gives a .body to both req and res
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+//variables to be passed and rendered in the EJS files and partials
 let greeting = "";
-
 let videos = [];
 let trendingTitles = [];
 let trendingThumbnails = [];
@@ -29,22 +24,16 @@ let song = "";
 let htmlCode = "";
 let lyrics = "";
 
-const htmlEntitiesMap = {
-    '&quot;': '"',
-    '&#39;': "'",
-    // Add more entities and their replacements as needed
-};
-
 //LANDING PAGE
 app.get("/", (req, res) =>{
     res.render("stars.ejs");
 })
 
-//get for when '/' is accessed
+// GET for when '/home' endpoint is requested
 app.get("/home", async (req, res) => {
     let page = "/home";
-
     videos = [];
+    // if trending videos have not been retrieved yet retrieve the necessary vals
     if (trendingThumbnails.length ===0){
         try{
             const result = await axios.get(TRENDING_URL);
@@ -62,31 +51,36 @@ app.get("/home", async (req, res) => {
             res.render("index.ejs", {greeting: "Unable to retrieve data:<br>"+error.response.data.error.message, content: "", videos, trendingTitles, trendingThumbnails, trendingIds, page});
         }
     }
+    //if trending vids alrd retrieved send the vars to the EJS
     else{
-        console.log("smile");
         res.render("index.ejs", {greeting: "Trending Music Videos", content: "" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
     }
     
 });
 
+// GET func for /search end point
 app.get("/search", async (req, res) => {
+    // clear trending vids info to not show in search 
     trendingTitles = [];
     trendingThumbnails = [];
     trendingIds = []
     let page = "/search";
     console.log(req.query.artist, req.query.song)
-    if (req.query.artist !== artist && req.query.song !== song){
+    // if any query vars are not equal to previous search or array is empty call APIs
+    if (req.query.artist !== artist || req.query.song !== song || videos.length === 0){
         artist = req.query.artist;
         song = req.query.song;
+        // clear array
         videos =[];
+        // replace spaces
         let artistMod = artist.replace(/ /g, '%20');
         let songMod = song.replace(/ /g, '%20');
         let searchWord = artistMod +"%20"+songMod;
         console.log(searchWord, YT_URL);
         try
         {
+            // use artist and song name as queris for YT
             const result = await axios.get(YT_URL+searchWord);
-            // Replace newlines with HTML line breaks
             let videoResults = result.data.items;
             videoResults.forEach(video =>{
                 // console.log(video);
@@ -99,13 +93,12 @@ app.get("/search", async (req, res) => {
         }
         try
         {
+            // send get request to lyric api and artist/song endpoint
             const result = await axios.get(LYRIC_URL+artist+"/"+song);
-            // Replace newlines with HTML line breaks
             // console.log(result.data.lyrics);
             lyrics = result.data.lyrics;
-            // Remove the substring "Paroles de la chanson" from the beginning of the lyrics
+            // replace the substring "Paroles de la chanson" and "par" from the beginning of the lyrics with "-"
             lyrics = lyrics.replace(/(^Paroles de la chanson|\bpar\b)/gi, '-');
-            // lyrics = lyrics.replace(/^Paroles de la chanson\s*/i, '');
             // Format the lyrics
             const formattedLyrics = lyrics.replace(/\r?\n/g, "<br>");
             // Wrap the lyrics in <p> tags
