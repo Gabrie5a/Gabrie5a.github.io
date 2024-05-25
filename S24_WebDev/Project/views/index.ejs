@@ -13,8 +13,7 @@
 </head>
 <body>
     <%- include("partials/navbar.ejs") %>
-    <h1><%=greeting %></h1>
-    <br/><br/>
+    <br/><br/> <br><br>
      <div class="d-flex justify-content-center">
      <form class="d-flex p-2 " role="search" action="/search" method="get">
         <input class="form-control me-2 justify-content-center" type="search" placeholder="Artist" aria-label="Search" name="artist">
@@ -22,7 +21,6 @@
         <button class="btn btn-dark" type="submit">Search</button>
       </form>
     </div>
-
     <!-- YouTube Vids -->
     <div class="d-flex p-2 justify-content-center yt_wrap">
     <div class="row overflow-auto flex-nowrap yt_vids">
@@ -45,13 +43,13 @@
     
 
       <!-- Trending Songs - List Group Numbered-->
-    
+        
         <% if (page === "/search") { %>
-            <div class="d-flex p-2 flex-column justify-content-center"> <h4 class="text-center trending hidden"> Trending Music Videos:</h4><br>
+            <div class="d-flex p-2 flex-column justify-content-center"> <h4 class="text-center trending hidden"><%-greeting %></h4><br>
         <% } else { %>
-            <div class="d-flex p-2 flex-column justify-content-center"> <h4 class="text-center trending"> Trending Music Videos:</h4><br>
+            <div class="d-flex p-2 flex-column justify-content-center"> <h4 class="text-center trending"> <%-greeting %></h4><br>
         <% } %>
-    
+        
         <ul class="list-group list-group d-flex p-2">
     <% trendingThumbnails.forEach((thumbnail, index) =>{ %>
         <% let title = trendingTitles[index]; %>
@@ -75,7 +73,7 @@
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    </script>
   
 </body>
 </html>
