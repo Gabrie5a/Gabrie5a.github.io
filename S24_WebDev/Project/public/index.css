@@ -2,6 +2,8 @@ body {
     background-image: url("music.jpg");
     background-size: 20%;
     font-family: 'Monaco', monospace;
+    position: relative;
+    min-height: 100vh;
     
 }
 
@@ -23,8 +25,8 @@ form {
  border: solid blanchedalmond;
 }
 
-.navbar-custom{
-    background-color: black;
+.navbar {
+    height: 10vh;;
 }
 
 .background{
@@ -41,6 +43,14 @@ form {
     margin-right: 25%;
     border: dotted white 5px;
 }
+.lyrics{
+    overflow: auto;
+    height: 100vh;
+}
+/* .trending{
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+} */
 
 .hidden{
     display: none;
@@ -51,9 +61,19 @@ footer{
     background-color: #111;
     color: whitesmoke;
     /* background-color: rgb(149, 211, 232); */
-    padding: 1%;
-    margin-bottom: -20%;;
+    
+    bottom: 0rem;
+    height: 12.5rem;
 }
+.social i{
+    font-size: x-large;
+}
+
+#offcanvasNavbarLabel{
+    top: 5vh;
+    font-size:large;
+}
+
 
 /* Custom Scrollbar */
 /* width */
@@ -73,10 +93,6 @@ footer{
     border: solid white;
     border-radius: 10px;
   }
-
-.social i{
-    font-size: xx-large;
-}
 
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(103, 186, 214); 

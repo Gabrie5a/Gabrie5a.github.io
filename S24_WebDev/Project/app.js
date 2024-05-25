@@ -17,7 +17,7 @@ const TRENDING_URL = "https://youtube.googleapis.com/youtube/v3/search?part=snip
 const app = express();
 //middleware - bodyParser gives a .body to both req and res
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"))
+app.use(express.static("public"));
 const greeting = "Star Lyrics";
 
 let videos = [];
@@ -46,7 +46,7 @@ app.get("/home", async (req, res) => {
     videos = [];
     if (trendingThumbnails.length ===0){
         try{
-            const {result, err} = await axios.get(TRENDING_URL);
+            const result = await axios.get(TRENDING_URL);
             // get thumbnails, titles and ids from videos
             let videoResults = result.data.items;
             videoResults.forEach(video =>{
@@ -56,7 +56,6 @@ app.get("/home", async (req, res) => {
                 trendingIds.push(video.id.videoId)
             });
             res.render("index.ejs", {greeting, content: "Search Lyrics" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
-            if(err) throw {err};
         } catch (error) {
             console.error(error);
             res.render("index.ejs", {greeting, content: error, videos, trendingTitles, trendingThumbnails, trendingIds, page});
@@ -85,7 +84,7 @@ app.get("/search", async (req, res) => {
         console.log(searchWord, YT_URL);
         try
         {
-            const {result, err} = await axios.get(YT_URL+searchWord);
+            const result = await axios.get(YT_URL+searchWord);
             // Replace newlines with HTML line breaks
             let videoResults = result.data.items;
             videoResults.forEach(video =>{
@@ -93,7 +92,7 @@ app.get("/search", async (req, res) => {
                 videos.push(video.id.videoId);
                 
             });
-            if(err) throw {err};
+
         } catch (error) {
             console.error(error);
         }
@@ -112,7 +111,7 @@ app.get("/search", async (req, res) => {
             htmlCode = `<p>${formattedLyrics}</p>`;
             res.render("index.ejs", {greeting, content: htmlCode , videos, trendingTitles, trendingThumbnails, trendingIds, page});
         } catch (error) {
-          res.render("index.ejs", {greeting, content: JSON.stringify(error.response.data), videos, trendingTitles, trendingThumbnails, trendingIds, page});
+          res.render("index.ejs", {greeting, content: JSON.stringify(error.response.data.error)+"<br>Make sure to type the artist's full name AND song!", videos, trendingTitles, trendingThumbnails, trendingIds, page});
         }
     }
    else{
