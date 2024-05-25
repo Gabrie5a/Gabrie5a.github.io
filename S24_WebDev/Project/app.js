@@ -1,7 +1,6 @@
 import express from "express";
 import axios from "axios";
 // import {dirname} from "path";
-import { fileURLToPath } from "url";
 
 
 //get current url path of current directory
