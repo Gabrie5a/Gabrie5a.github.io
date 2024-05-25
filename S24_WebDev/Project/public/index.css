@@ -1,0 +1,83 @@
+body {
+    background-image: url("music.jpg");
+    background-size: 20%;
+    font-family: 'Monaco', monospace;
+    
+}
+
+form {
+    width: 70%;
+    /* background-color: bisque; */
+}
+
+.list-group-item{
+    width: 70% ;
+    align-self: center;
+}
+
+.yt_vids{
+    width: 80%;
+}
+
+.yt-wrap{
+ border: solid blanchedalmond;
+}
+
+.navbar-custom{
+    background-color: black;
+}
+
+.background{
+    background-color: azure;
+    width: 50%;
+}
+
+.lyrics, .trending{
+    font-family: 'Monaco', monospace;
+    padding: 1%;
+    background-color: #111;
+    color: whitesmoke;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: dotted white 5px;
+}
+
+.hidden{
+    display: none;
+}
+footer{
+    font-family: 'Monaco', monospace;
+    width: 100%;
+    background-color: #111;
+    color: whitesmoke;
+    /* background-color: rgb(149, 211, 232); */
+    padding: 1%;
+    margin-bottom: -20%;;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gainsboro; 
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightskyblue; 
+    border: solid white;
+    border-radius: 10px;
+  }
+
+.social i{
+    font-size: xx-large;
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(103, 186, 214); 
+  }
