@@ -2,7 +2,7 @@
 
 This is a web application that allows users to search for song lyrics.
 
-## Features
+## Description
 
 - **Search Lyrics**: Users can search for song lyrics using the artist and song title.
 
