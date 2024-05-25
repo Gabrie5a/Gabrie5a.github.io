@@ -1,4 +1,4 @@
-# Lyrics Website
+# StarLy - Lyrics Website
 
 This is a web application that allows users to search for song lyrics.
 
@@ -49,8 +49,3 @@ StarLy is deployed at https://starly.onrender.com
 - **Falling Stars Animation**: The Falling Stars animation effect used in this website is inspired by a tutorial by Online Tutorials. [Tutorial Link](https://youtu.be/4jmjXAC4gq0?si=QYdIAIG6H6RFLydY)
 - **Text Animation**: The text animation effect used for the site name is adapted from Elisabeth Diang's CSS Text Animation, available on [Slider Revolution](https://www.sliderrevolution.com/resources/css-text-animation/).
 - **Background Image**: The background image utilized in this website is sourced from Vecteezy's collection of music vectors. You can find it [here](https://www.vecteezy.com/free-vector/music").
-
-
-## License
-
-This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
