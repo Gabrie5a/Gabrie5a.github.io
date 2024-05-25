@@ -46,7 +46,7 @@ app.get("/home", async (req, res) => {
     videos = [];
     if (trendingThumbnails.length ===0){
         try{
-            const result = await axios.get(TRENDING_URL);
+            const {result, err} = await axios.get(TRENDING_URL);
             // get thumbnails, titles and ids from videos
             let videoResults = result.data.items;
             videoResults.forEach(video =>{
@@ -56,9 +56,10 @@ app.get("/home", async (req, res) => {
                 trendingIds.push(video.id.videoId)
             });
             res.render("index.ejs", {greeting, content: "Search Lyrics" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
+            if(err) throw {err};
         } catch (error) {
             console.error(error);
-            res.render("index.ejs", {greeting, content: "error", videos, trendingTitles, trendingThumbnails, trendingIds, page});
+            res.render("index.ejs", {greeting, content: error, videos, trendingTitles, trendingThumbnails, trendingIds, page});
         }
     }
     else{
@@ -84,13 +85,15 @@ app.get("/search", async (req, res) => {
         console.log(searchWord, YT_URL);
         try
         {
-            const result = await axios.get(YT_URL+searchWord);
+            const {result, err} = await axios.get(YT_URL+searchWord);
             // Replace newlines with HTML line breaks
             let videoResults = result.data.items;
             videoResults.forEach(video =>{
                 // console.log(video);
                 videos.push(video.id.videoId);
+                
             });
+            if(err) throw {err};
         } catch (error) {
             console.error(error);
         }

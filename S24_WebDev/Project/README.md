@@ -27,12 +27,12 @@ StarLy is deployed at https://starly.onrender.com
    PORT=3000
    ```
 
-   Replace `your_youtube_api_key_here` with your actual YouTube Data API v3 key.
+   Replace `your_youtube_api_key_here` with your own YouTube Data API key. Read the documentation [here](https://developers.google.com/youtube/v3/getting-started) to acquire and activate your API key.
 
 4. Run the application:
 
    ```bash
-   npm start
+   node --env-file=.env app.js 
    ```
 
 5. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
