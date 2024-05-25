@@ -18,7 +18,7 @@ const app = express();
 //middleware - bodyParser gives a .body to both req and res
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-const greeting = "Star Lyrics";
+let greeting = "";
 
 let videos = [];
 let trendingTitles = [];
@@ -43,6 +43,7 @@ app.get("/", (req, res) =>{
 //get for when '/' is accessed
 app.get("/home", async (req, res) => {
     let page = "/home";
+
     videos = [];
     if (trendingThumbnails.length ===0){
         try{
@@ -55,15 +56,15 @@ app.get("/home", async (req, res) => {
                 trendingTitles.push(video.snippet.title);
                 trendingIds.push(video.id.videoId)
             });
-            res.render("index.ejs", {greeting, content: "Search Lyrics" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
+            res.render("index.ejs", {greeting: "Trending Music Videos", content: "" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
         } catch (error) {
             console.error(error);
-            res.render("index.ejs", {greeting, content: error, videos, trendingTitles, trendingThumbnails, trendingIds, page});
+            res.render("index.ejs", {greeting: "Unable to retrieve data:<br>"+error.response.data.error.message, content: "", videos, trendingTitles, trendingThumbnails, trendingIds, page});
         }
     }
     else{
         console.log("smile");
-        res.render("index.ejs", {greeting, content: "Search Lyrics" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
+        res.render("index.ejs", {greeting: "Trending Music Videos", content: "" , videos, trendingTitles, trendingThumbnails, trendingIds, page});
     }
     
 });
@@ -111,7 +112,7 @@ app.get("/search", async (req, res) => {
             htmlCode = `<p>${formattedLyrics}</p>`;
             res.render("index.ejs", {greeting, content: htmlCode , videos, trendingTitles, trendingThumbnails, trendingIds, page});
         } catch (error) {
-          res.render("index.ejs", {greeting, content: JSON.stringify(error.response.data.error)+"<br>Make sure to type the artist's full name AND song!", videos, trendingTitles, trendingThumbnails, trendingIds, page});
+          res.render("index.ejs", {greeting, content: JSON.stringify(error.response.data.error), videos, trendingTitles, trendingThumbnails, trendingIds, page});
         }
     }
    else{
