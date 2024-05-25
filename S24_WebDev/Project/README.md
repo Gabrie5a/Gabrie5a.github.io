@@ -4,7 +4,7 @@ This is a web application that allows users to search for song lyrics.
 
 ## Features
 
-- **Search Lyrics**: Users can search for song lyrics using keywords.
+- **Search Lyrics**: Users can search for song lyrics using the artist and song title.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ To get a local copy up and running, follow these steps:
 
 ## Usage
 
-1. Enter keywords in the search bar to search for song lyrics.
+1. Enter the artist and song name in the respective fields to search for song lyrics.
 
 ## Deployed Website
 
